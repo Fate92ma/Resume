@@ -34,7 +34,7 @@ img {
     max-width: 100%;
 }
 
-/* Background */
+/* Start Background */
 
 .bg-bubbles {
     position: fixed;
@@ -137,7 +137,9 @@ img {
     }
 }
 
-/* Main */
+/* End Background */
+
+/* Start Main */
 
 main {
     margin: auto;
@@ -146,7 +148,9 @@ main {
     height: 100%;
 }
 
-/* List */
+/* End Main */
+
+/* Start List */
 
 .tabs {
     align-self: center;
@@ -185,7 +189,9 @@ main {
     color: var(--main-color) !important
 }
 
-/* Left */
+/* End List */
+
+/* Start Left */
 
 .left {
     align-self: center;
@@ -242,7 +248,9 @@ main {
     color: var(--main-color);
 }
 
-/* Scrollbar */
+/* End Left */
+
+/* Start Scrollbar */
 
 .right::-webkit-scrollbar {
     width: 10px;
@@ -256,10 +264,12 @@ main {
     background: var(--main-color);
 }
 
-/* Right */
+/* End Scrollbar */
+
+/* Start Right */
 
 .right {
-    height: 550px;
+    height: 600px;
     flex: 1;
     background: white;
     padding-left: 12px;
@@ -282,21 +292,25 @@ main {
     padding-top: 10px;
     font-size: 15px;
     line-height: 18px;
+    margin-bottom: 15px;
 }
 
-/* About */
+/* End Right */
+
+/* Start About */
 
 .about-list {
-    margin-top: 20px;
     width: 80%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     font-size: 14px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto
 }
 
-/* Services */
+/* End About */
+
+/* Start Services */
 
 .services {
     padding-top: 25px;
@@ -305,12 +319,11 @@ main {
 .services-items {
     display: flex;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .item {
-    margin: 15px;
+    margin: 10px;
 }
 
 .item i {
@@ -333,7 +346,9 @@ main {
     font-size: 14px;
 }
 
-/* Pricing */
+/* End Services */
+
+/* Start Pricing */
 
 .pricing {
     padding-top: 25px;
@@ -371,7 +386,9 @@ main {
     margin-top: 25px;
 }
 
-/* Fun-Fact */
+/* End Pricing */
+
+/* Start Fun-Fact */
 
 .fact {
     padding-top: 25px;
@@ -395,7 +412,9 @@ main {
     font-size: 14px;
 }
 
-/* Clients */
+/* End Fun-Fact */
+
+/* Start Clients */
 
 .clients {
     padding-top: 25px;
@@ -404,6 +423,7 @@ main {
 .all-clients {
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 96%;
 }
@@ -413,7 +433,9 @@ main {
     opacity: 0.3;
 }
 
-/* Resume */
+/* End Clients */
+
+/* Start Resume */
 
 #resume {
     padding-top: 25px;
@@ -475,7 +497,9 @@ main {
     padding-left: 15px
 }
 
-/* Skills */
+/* End Resume */
+
+/* Start Skills */
 
 .one,
 .two {
@@ -517,7 +541,9 @@ main {
     padding-left: 15px
 }
 
-/* Works */
+/* End Skills */
+
+/* Start Works */
 
 .portfolio {
     margin: 10px;
@@ -525,7 +551,9 @@ main {
     text-align: center;
 }
 
-/* Latest Posts */
+/* End Works */
+
+/* Start Latest Posts */
 
 #posts {
     clear: both;
@@ -564,7 +592,9 @@ main {
     color: var(--border-color);
 }
 
-/* Contact */
+/* End Latest Posts */
+
+/* Start Contact */
 
 #contact {
     padding-top: 40px;
@@ -580,7 +610,9 @@ main {
     margin-right: auto;
 }
 
-/* Form */
+/* End Contact */
+
+/* Start Form */
 
 .form1 {
     padding-top: 40px;
@@ -621,12 +653,19 @@ input:focus {
     color: var(--main-color);
 }
 
-/* Media Query */
+/* End Form */
 
-@media (max-width: 1100px) {
+/* Start Media Query */
+
+@media (max-width: 1024px) {
     main {
+        padding: 20px 10px;
         height: auto;
         flex-direction: column
+    }
+
+    .right {
+        margin: 0;
     }
 
     .tabs {
@@ -636,7 +675,8 @@ input:focus {
     }
 
     .tabs li {
-        margin: 5px
+        padding: 4px;
+        margin: 3px
     }
 
     .left {
@@ -644,16 +684,16 @@ input:focus {
     }
 }
 
-@media (max-width: 700px) {
-    body {
-        text-align: center
-    }
-
+@media (max-width: 768px) {
     .right {
         padding: 10px;
         height: auto;
         overflow: hidden;
         border-left: none;
+    }
+
+    .right h2 {
+        text-align: center
     }
 
     .about-list,
@@ -674,6 +714,7 @@ input:focus {
     .cells,
     .all-clients {
         width: 96%;
+        text-align: center;
         flex-direction: column
     }
 
@@ -691,3 +732,5 @@ input:focus {
         margin-top: 0
     }
 }
+
+/* End Media Query */
